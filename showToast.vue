@@ -11,7 +11,7 @@
 <script>
 const showToast = {
 	install(Vue,options) {
-		Vue.prototype.$showToast = function (text, time = 2000, callback) {
+		Vue.prototype.$showToast = function (text, duration = 2000, callback) {
 			document.querySelector(".common-toast").style.display = "block";
 			const newToast = document.querySelector(".common-toast .content");
 			newToast.querySelector("span").innerText = text;
@@ -26,7 +26,7 @@ const showToast = {
 				if (typeof callback === "function"){
 					callback();
 				}
-			},time);
+			}, duration);
 		}
 	}
 }
