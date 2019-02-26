@@ -52,7 +52,7 @@ this.$showToast("默认2秒的弹窗");
 this.$showToast("持续显示10秒", 10000);
 
 //执行回调函数
-this.$showToast("发布成功，即将进入首页…", 2000, function(){
+this.$showToast("发布成功，即将进入首页…", 2000, () => {
 	this.$router.push({
 		name: "home"
 	});
